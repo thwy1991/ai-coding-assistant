@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  ai-coding-assistant:
+    build: .
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./workspace:/app/workspace
+      - ./config.yaml:/app/config.yaml
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - DEBUG=${DEBUG:-false}
+    restart: unless-stopped

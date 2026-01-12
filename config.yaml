@@ -1,0 +1,30 @@
+# AI Coding Assistant 配置文件
+
+# 沙箱配置
+sandbox:
+  timeout: 30              # 执行超时时间（秒）
+  memory_limit: "100m"     # 内存限制
+  cpu_limit: 0.5          # CPU限制
+  enable_docker: true      # 是否启用Docker
+
+# LLM配置
+llm:
+  model: "deepseek-chat"          # 模型名称
+  temperature: 0.2         # 温度参数
+  max_tokens: 4096        # 最大token数
+  api_key: ""             # API密钥（建议使用环境变量）
+
+# 安全配置
+security:
+  enable_sandbox: true     # 是否启用沙箱
+  max_code_length: 10000  # 最大代码长度
+
+# 工作区配置
+workspace:
+  base_path: "./workspace"  # 工作区基础路径
+
+# 前端配置
+frontend:
+  title: "AI Coding Assistant"
+  theme: "light"
+  language: "zh-CN"
